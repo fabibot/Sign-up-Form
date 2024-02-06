@@ -48,6 +48,15 @@ table {
 }
 /*********************************************************************/
 
+
+html{
+    font-size: 62.5%;
+    --purple-color: #8A68EE;
+    --purple-color-op : rgba(138, 104, 238, 0.2);
+}
+
+
+
 body{
     background-image: url('CouverturePortfolio.jpg');
     background-repeat: repeat;
@@ -55,9 +64,7 @@ body{
     background-size: 100%;
 }
 
-html{
-    font-size: 62.5%;
-}
+
 
 .main{
    display: flex;
@@ -78,9 +85,9 @@ html{
 
 .left-side > div{
     margin-top: 250px;
-    background-color: rgba(50, 0, 255, 0.2);
+    background-color: var(--purple-color-op);
     height: 100px;
-    color: blue;
+    color: var(--purple-color);
 }
 
 .right-side{
@@ -99,7 +106,7 @@ html{
 
 .divForm{
     padding: 20px 40px;
-    background-color: rgba(138, 104, 238, 0.2);
+    background-color: var(--purple-color-op);
     
 }
 
@@ -133,7 +140,7 @@ h2, label{
 }
 
 #buttonCreate{
-    background-color: #8A68EE;
+    background-color: var(--purple-color);
     padding: 15px 30px;
     border: none;
     margin-bottom: 20px;
