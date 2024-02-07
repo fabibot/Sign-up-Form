@@ -54,21 +54,16 @@ table {
     src: url(Bonello-Regular.otf);
 }
 
+@font-face {
+    font-family: "Open_Sans";
+    src: url(Open_Sans/OpenSans-VariableFont_wdth,wght.ttf);
+}
+
 html{
     font-size: 62.5%;
-    --purple-color: #8A68EE;
-    --purple-color-op : rgba(138, 104, 238, 0.2);
+    --purple-color: #1900f5;
+    --purple-color-op : rgba(169, 214, 241, 0.55);
 }
-
-
-
-body{
-    background-image: url('CouverturePortfolio.jpg');
-    background-repeat: repeat;
-    background-attachment: fixed;  
-    background-size: 100%;
-}
-
 
 
 .main{
@@ -82,6 +77,11 @@ body{
 }
 
 .left-side{
+    background-image: url('CouverturePortfolio.jpg');
+    background-repeat: repeat;
+    background-attachment: fixed;  
+    background-size: 100%;
+
     flex-basis: 400px;
     flex-shrink: 2;
     display: flex;
@@ -112,7 +112,7 @@ body{
 }
 
 .right-side, #buttonCreate, .divForm {
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 img{
@@ -123,7 +123,7 @@ img{
 .divForm{
     padding: 20px 40px 30px 40px;
     background-color: var(--purple-color-op);
-    box-shadow: 0px 2px 8px var(--purple-color);
+    box-shadow: 0px 2px 20px var(--purple-color-op);
     
 }
 
@@ -148,8 +148,16 @@ input:focus{
     box-shadow: 0px 0px 5px var(--purple-color);
 }
 
+ input:valid{
+    border: solid 1px greenyellow;
+} 
+
+input:invalid{
+    border: solid 1px red;
+} 
+
 h2, h3, label, #buttonCreate{
-    font-family: FreeMono, monospace;
+    font-family: Open_Sans, sans-serif;
     font-weight: 100;
 }
 
@@ -160,6 +168,10 @@ h1{
     text-align: center;
 }
 
+h2{
+    font-weight: 450;
+}
+
 h2, label{
     font-size: 2rem;
 }
@@ -167,6 +179,11 @@ h2, label{
 h3, #buttonCreate  {
     font-size: 1.5rem;
 }
+
+.right-side > div:last-child{
+    margin-top: 40px;
+}
+
 #buttonCreate{
     background-color: var(--purple-color);
     padding: 15px 30px;
@@ -176,22 +193,14 @@ h3, #buttonCreate  {
 }
 
 #buttonCreate:hover{
-    box-shadow: 0px 2px 5px var(--purple-color);
+    box-shadow: 2px 2px 3px var(--purple-color);
 }
 
 .logLink{
-    color: purple;
+    color: var(--purple-color);
 }
 
 .logLink:hover{
     text-decoration: underline;
 }
 
-
-/*ajouter des valeurs inventé avec --valeur et des valeur ::comme ca aussi
-ajouter des fieltruc et des légences
-et des validation en cours de route aussi avec :valid et :invalid
-personnaliser le form pour qu'il soit BEAU
-personaliser les msg du form eventuellement
-
-avec tout ca on sera bien*/
